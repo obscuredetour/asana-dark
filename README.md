@@ -1,32 +1,21 @@
 <p align="left">
-  <img width=580px src="images/logo.svg">
+  <img width=580px src="images/asana-dark-logo.svg">
   <br>
-  <a style="display: inline-block" href="https://github.com/obscuredetour/goodreads-dark/">
+  <a style="display: inline-block" href="https://github.com/obscuredetour/asana-dark/">
     <img alt="Maintained?" src="https://img.shields.io/maintenance/yes/2019.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
   </a>
-  <a href="https://github.com/obscuredetour/goodreads-dark/commits/master">
-    <img alt="Last commit" src="https://img.shields.io/github/last-commit/obscuredetour/goodreads-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
+  <a href="https://github.com/obscuredetour/asana-dark/commits/master">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/obscuredetour/asana-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29">
   </a>
-  <a href="https://github.com/obscuredetour/goodreads-dark/tags">
-    <img alt="Tag" src="https://img.shields.io/github/tag/obscuredetour/goodreads-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29&label=version">
+  <a href="https://github.com/obscuredetour/asana-dark/tags">
+    <img alt="Tag" src="https://img.shields.io/github/tag/obscuredetour/asana-dark.svg?colorB=hsl%28165%2C%2042%25%2C%2035%25%29&label=version">
   </a>
 </p>
 
-# Goodreads Dark (Jade) theme
-This is a dark theme for the [goodreads.com](https://www.goodreads.com) website. This custom userstyle follows [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) guidelines.
+# Asana theme
+This is a dark theme for the [asana.com](https://www.asana.com) website. This custom userstyle follows [UserCSS](https://github.com/openstyles/stylus/wiki/UserCSS) guidelines.
 
-### 2 versions
-**Dark Jade Default**
-
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css)
-
-The default Dark Jade theme colors can be [seen here](#dark-jade-default). Accent colors are green (jade) and background colors are dark grey.
-
-**Dark Jade (OG)**
-
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-og.user.css)
-
-The Dark Jade (OG) is the original theme. More green, less grey overall. [Seen here](#dark-jade-og).
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-285959.svg)](https://github.com/obscuredetour/asana-dark/raw/master/asana-dark.user.css)
 
 ## Table of Contents
 
@@ -38,15 +27,7 @@ The Dark Jade (OG) is the original theme. More green, less grey overall. [Seen h
 
 ## Preview
 
-### Dark Jade (Default)
-![Goodreads - Login](images/ss-gr-login-zs.png)
-![Goodreads - Recent](images/ss-gr-recent-zerosat.png)
-
-### Dark Jade (OG)
-![Goodreads - Login](images/ss-gr-login-og.png)
-![Goodreads - Recent](images/ss-gr-recent.png)
-![Goodreads - Choice Awards](images/ss-gr-2018-choice.png)
-
+Screenshots coming soon.
 
 **[Back to top](#table-of-contents)**
 
@@ -59,20 +40,7 @@ A userstyle extension for your browser is required, here are a few to choose fro
 
 Install the dark theme with the links below. They support automatic updates.
 
-- [Install goodreads.com Dark (Jade) theme](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css)
-- [Install goodreads.com Dark (Jade) **OG** theme](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark-og.user.css)
-
-Default Dark (Jade) theme colors can be seen [here](#dark-jade-default). It keeps the accent colors the same but zeros out the saturation on the backgrounds making it more grey.
-
-Dark (Jade) **OG** is the original theme. More green, less grey overall. [Seen here](#dark-jade-og).
-
-Then, the raw file will open in the browser and the extension will open a new tab asking to install it. After clicking *'install style'*, you're finished.
-
-Or visit the [Goodreads dark (jade) theme](https://userstyles.org/styles/166991/goodreads-dark-jade-theme) at Userstyles.org and click **Install Style**
-
-Copy and pasting the [goodreads-dark.user.css](https://github.com/obscuredetour/goodreads-dark/raw/master/goodreads-dark.user.css) file into the extension also works.
-
-Further instructions can be found [here](https://github.com/openstyles/stylus/wiki/UserCSS#usercss-file).
+- [Install asana.com Dark theme](https://github.com/obscuredetour/asana-dark/raw/master/asana-dark.user.css)
 
 **[Back to top](#table-of-contents)**
 
@@ -84,47 +52,14 @@ Open an issue first to discuss potential changes/additions.
 
 ## Color palette
 
-### Accent colors (jade)
-![Jade color scheme](images/jade-palette.png)
-*Image created in [Color Deck](https://color.obscuredetour.com)*
-
-<!-- ### Background & text colors
-![Jade color scheme](images/jade-palette_bkg-txt.png)
-*Image created in [Color Deck](https://color.obscuredetour.com)* -->
+Detailed color palette coming soon.
 
 **[Back to top](#table-of-contents)**
 
 ## Notes
 
-##### Why is it so green?
+### Credits
 
-The color scheme was inspired by Jade City. Here's why,
-
-![Goodreads.com default link color](images/og-jade_default-gr-link.png)
-
-  1. The color above is Goodreads.com default link color. `hsl(176, 100%, 19%)`
-
-  2. I read [Jade City by Fonda Lee](https://www.goodreads.com/book/show/34606064-jade-city) right before creating this.
-
-  3. What can I say? I had jade on my mind.
-
-### Bigger project than anticipated
-
-This turned out to be a **HUGE** undertaking. It definitely was the hardest I have tackled thus far. Holy mackrel, why is goodreads so against reusing styles?
-
-I also took liberties with some aesthetics.
-- The removal of many borders.
-- Increased some padding here and there.
-- Rounded out some corners.
-
-**[Back to top](#table-of-contents)**
-
-## Archived Screenshots
-
-[v1.1 - Goodreads - Explore](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/images/ss_v1.1-gr-explore.png)
-
-[v1.1 - Goodreads - News & Interviews](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/images/ss_v1.1-gr-news.png)
-
-[v1.1 - Goodreads - 2018 Choice Awards](https://raw.githubusercontent.com/obscuredetour/goodreads-dark/master/images/ss_v1.1-gr-2018-choice.png)
+This theme is a heavily modified version of [Ater Roseum's Dark Theme for Asana](https://userstyles.org/styles/164532/dark-theme-for-asana). Credit to the original author and theme.
 
 **[Back to top](#table-of-contents)**
