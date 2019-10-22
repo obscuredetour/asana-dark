@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name        Asana Dark theme
 @namespace   https://github.com/obscuredetour/
-@version     1.0.0
+@version     1.0.1
 @license     MIT
 @author      obscure detour (https://www.jeffreysummers.me)
 @homepageURL https://github.com/obscuredetour/asana-dark
-@updateURL   https://github.com/obscuredetour/goodreads-dark/raw/master/asana-dark.user.css
+@updateURL   https://github.com/obscuredetour/asana-dark/raw/master/asana-dark.user.css
 ==/UserStyle== */
 @-moz-document domain("app.asana.com"), domain("blog.asana.com") {
   :root {
@@ -257,7 +257,8 @@
   /* .SpreadsheetProjectGridContents, */
   .SpreadsheetGridHeaderStructure,
   .SpreadsheetFieldHeading:hover,
-  .SpreadsheetFieldHeading.SpreadsheetFieldHeading--isDropdownOpen {
+  .SpreadsheetFieldHeading.SpreadsheetFieldHeading--isDropdownOpen,
+  .AttachmentCard {
     background: var(--stone);
   }
   .Sidebar,
@@ -365,7 +366,9 @@
     fill: var(--dolphin);
   }
   .InboxReferencedTaskItem-detailsButton:hover,
-  .CountWithIcon {
+  .CountWithIcon,
+  .RichAttachment-labelLink,
+  .AttachmentCard-metaData {
     color: var(--gray);
     fill: var(--gray);
   }
@@ -548,7 +551,8 @@
   .SpreadsheetProjectGridContents--withSpreadsheetTextBoxOnNameCellHover
     .SpreadsheetTaskNameCell:hover
     .SpreadsheetTaskName--editable:not(.SpreadsheetTaskName--childFocused),
-  .Token.Token--colorNone:hover:not(:focus) {
+  .Token.Token--colorNone:hover:not(:focus),
+  .AttachmentCard--validLink:hover {
     background: var(--soot);
     box-shadow: none;
   }
@@ -559,7 +563,8 @@
   .InboxFeed-thread,
   .CommentComposerEditor,
   .simpleTextarea.simpleTextarea--dynamic:focus,
-  .Popover--light .Popover-caret::before {
+  .Popover--light .Popover-caret::before,
+  .AttachmentCard {
     border-color: var(--boulder);
   }
   .InboxFeed-thread,
@@ -573,7 +578,8 @@
   .DraggableSpreadsheetTaskRow--isSelected
     .DraggableSpreadsheetTaskRow-dragHandle,
   .ShadowScrollable-headerShadow,
-  .PotListPageContent-detailsOverlay {
+  .PotListPageContent-detailsOverlay,
+  .AttachmentCard--validLink:hover {
     border-color: var(--mine);
   }
   .DropTargetTaskGroupHeader-child {
