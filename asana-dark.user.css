@@ -86,12 +86,14 @@
 
   /* SCROLL BARS */
   ::-webkit-scrollbar,
-  .scrollable--vertical::-webkit-scrollbar {
+  .scrollable--vertical::-webkit-scrollbar,
+  .SpreadsheetGridScroller-horizontalScrollbarScrollable::-webkit-scrollbar {
     width: 8px !important;
   }
 
   ::-webkit-scrollbar-thumb,
-  .scrollable--vertical::-webkit-scrollbar-thumb {
+  .scrollable--vertical::-webkit-scrollbar-thumb,
+  .SpreadsheetGridScroller-horizontalScrollbarScrollable::-webkit-scrollbar-thumb {
     background: #808080 !important;
     border-radius: 20px !important;
     border: 3px solid transparent;
@@ -99,7 +101,8 @@
   }
 
   ::-webkit-scrollbar-track,
-  .scrollable--vertical::-webkit-scrollbar-track {
+  .scrollable--vertical::-webkit-scrollbar-track,
+  .SpreadsheetGridScroller-horizontalScrollbarScrollable::-webkit-scrollbar-track {
     background: transparent !important;
     border-radius: 20px !important;
   }
@@ -139,6 +142,7 @@
   .SpreadsheetGridHeaderStructure,
   .SpreadsheetGridHeaderStructure .SpreadsheetGridHeaderStructure-left,
   .SortableList-itemContainer--column > .SortableList-sortableItem,
+  .ProjectSpreadsheetSumRow-stickyCell,
   .SpreadsheetFieldsHeader--withRightGutter,
   .SpreadsheetPlaceholderCell {
     /*     background: #1a1a1a */
@@ -150,7 +154,8 @@
   .TopbarSearchTypeahead-background,
   .TopbarSearchTypeahead-background::before,
   .PotListPageContent--withSpreadsheetGridEnabled,
-  .SpreadsheetPlaceholderCell--withoutRightBorder.SpreadsheetPlaceholderCell.SpreadsheetTaskRow-addFieldPlaceholder {
+  .SpreadsheetPlaceholderCell--withoutRightBorder.SpreadsheetPlaceholderCell.SpreadsheetTaskRow-addFieldPlaceholder,
+  .NotificationTopBar--info {
     background: var(--jet);
   }
   .dialog2,
@@ -284,6 +289,9 @@
   .SpreadsheetCell.SpreadsheetCell:focus-within:not(:focus) {
     background: var(--stone);
   }
+  .ModalBuffer {
+    background-color: rgba(55, 55, 55, 0.6);
+  }
   .TaskRow.ItemRow--enabled:not(.ItemRow--focused):not(.ItemRow--highlighted):hover,
   .ItemRow--enabled:hover {
     background: var(--raven);
@@ -335,7 +343,8 @@
     .DueDate--soon,
   .InboxReferencedTaskItem--completed
     .InboxReferencedTaskItem-dueDate
-    .DueDate--future {
+    .DueDate--future,
+    .NotificationTopBar--info .NotificationTopBar-titleAndDescription {
     color: var(--txt-gray);
   }
   .TaskAddedToPotInboxThread-creators,
@@ -549,8 +558,8 @@
   }
   .SpreadsheetCell:hover .SpreadsheetTaskName-input,
   .SpreadsheetProjectGridContents--withSpreadsheetTextBoxOnNameCellHover
-    .SpreadsheetTaskNameCell:hover
-    .SpreadsheetTaskName--editable:not(.SpreadsheetTaskName--childFocused),
+  .SpreadsheetTaskNameCell:hover
+  .SpreadsheetTaskName--editable:not(.SpreadsheetTaskName--childFocused),
   .Token.Token--colorNone:hover:not(:focus),
   .AttachmentCard--validLink:hover {
     background: var(--soot);
@@ -579,12 +588,15 @@
     .DraggableSpreadsheetTaskRow-dragHandle,
   .ShadowScrollable-headerShadow,
   .PotListPageContent-detailsOverlay,
-  .AttachmentCard--validLink:hover {
+  .SpreadsheetProjectGrid-horizontalScrollSeam,
+  .AttachmentCard--validLink:hover,
+  .SpreadsheetProjectGrid-dropTargetRightChild,
+  .SpreadsheetProjectGrid-dropTargetStickyCell {
     border-color: var(--mine);
   }
-  .DropTargetTaskGroupHeader-child {
+  /* .DropTargetTaskGroupHeader-child {
     border-top-color: var(--mine);
-  }
+  } */
   .generic-input.hovered:not(.override-hover-border):not([disabled]),
   .generic-input:hover:not(.override-hover-border):not([disabled]),
   textarea.hovered:not(.override-hover-border):not([disabled]),
@@ -1170,7 +1182,9 @@
   .SpreadsheetGridHeader-taskNameHeadingCell:hover,
   .SpreadsheetGridHeader-taskNameHeadingCell.SpreadsheetGridHeader-taskNameHeadingCell--isDropdownOpen,
   .SpreadsheetGridHeader-taskNameHeadingCell.SpreadsheetGridHeader-taskNameHeadingCell--isSortedByField,
-  .PotListPageContent-detailsOverlay {
+  .PotListPageContent-detailsOverlay,
+  .AssigneeWithName-name,
+  .CommentOnlyInfo-icon {
     color: var(--pearl);
     fill: var(--pearl);
   }
@@ -1189,7 +1203,8 @@
   .SidebarItemRow:visited,
   .ToggleFollowButton-toggleButton.ToggleFollowButton--following
     > .ToggleFollowButton-toggleText,
-  .SpreadsheetTaskNameCell-detailsButton {
+  .SpreadsheetTaskNameCell-detailsButton,
+  .ProjectSpreadsheetSumTotalCell-totalValue {
     color: var(--txt-gray);
   }
   .TaskPrivacyBanner-questionMarkIcon {
@@ -1198,7 +1213,8 @@
   .BlockStory-metadata,
   .PageToolbarInfoDisplay,
   .SidebarFavoritesAndMore-showMoreOrLessButton,
-  .TaskRow-parentTaskName {
+  .TaskRow-parentTaskName,
+  .ProjectSpreadsheetSumTotalCell {
     color: var(--heather);
   }
   .SidebarFavoritesAndMore-showMoreOrLessButton {
@@ -3307,15 +3323,14 @@
   .TabButton,
   .Tab-selectableTab:hover,
   .MenuItemBase-button,
-  .MenuItemWithDescription-description {
+  .MenuItemWithDescription-description,
+  .CommentOnlyInfo-text {
     color: var(--alto);
   }
   .MessageBanner--important,
   .MessageBanner--medium .MessageBanner-contents {
     background-color: #3e3726;
-    /*#513C06 */
     color: var(--txt-gray);
-    /* #E9B949 */
   }
   .billing-dialog-page
     .billingPageTeamDropdownViewMenu-selectTeam:not(.is-disabled):active,
