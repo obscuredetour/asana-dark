@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2020-01-15
+### Changed
+- Fixed task pane styling
+- Fixed subtasks styles
+
 ## [1.0.4] - 2020-01-02
 ### Added
 - Fixed Project List cells not being styled

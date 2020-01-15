@@ -158,13 +158,19 @@
   .SpreadsheetFieldsHeader--withRightGutter,
   .SpreadsheetPlaceholderCell,
   .ShadowScrollable-border,
-  .PotFiles {
+  .PotFiles,
+  .SingleTaskPaneSpreadsheet-feed {
     /*     background: #1a1a1a */
     background: var(--night);
     color: var(--txt-second);
   }
   .BoardColumnScrollableContainer-scrollableTopSeam {
     background: linear-gradient(90deg, rgba(232, 236, 238, 0), var(--night) 3%, var(--night) 97%, rgba(232, 236, 238, 0));
+  }
+
+  .SingleTaskPaneSpreadsheet-body,
+  .SingleTaskPaneSpreadsheet-header {
+    background: var(--space);
   }
 
   .AsanaPageTopbar,
@@ -622,8 +628,24 @@
   .SpreadsheetProjectGrid-horizontalScrollSeam,
   .AttachmentCard--validLink:hover,
   .SpreadsheetProjectGrid-dropTargetRightChild,
-  .SpreadsheetProjectGrid-dropTargetStickyCell {
+  .SpreadsheetProjectGrid-dropTargetStickyCell,
+  .SubtaskList--withFirstLastSeparatingLines::before,
+  .SubtaskTaskRow.SubtaskTaskRow--isSpreadsheetTaskPane::after,
+  .SubtaskList--withFirstLastSeparatingLines::after,
+  .SectionRow-sectionName {
     border-color: var(--mine);
+  }
+  .TaskRow:not(.TaskRow--borderless)::after {
+    border-color: transparent;
+  }
+  .DropTargetRow--isSpreadsheetGridDisabled {
+    padding: 0.25rem 0;
+  }
+  .TaskList .dropTargetRow:first-child {
+    margin-top: 0.5rem;
+  }
+  .SubtaskTaskRow.SubtaskTaskRow--isSpreadsheetTaskPane.ItemRow--enabled:not(.ItemRow--focused):not(.ItemRow--highlighted):hover {
+    background: var(--raven);
   }
   /* .DropTargetTaskGroupHeader-child {
     border-top-color: var(--mine);
@@ -696,6 +718,11 @@
   .MenuItemBase--disabled:focus,
   .ShadowScrollable-header {
     background: var(--space);
+    color: var(--alabaster);
+  }
+  .TaskPaneToolbarCompletionButton.StatusButton--isUnset.StatusButton--isSpreadsheetTaskPane:not(.Button--disabled).Button--secondaryColorOnHoverOnly {
+    border-color: var(--mine);
+    background: var(--soot);
     color: var(--alabaster);
   }
   .Button--secondary:not(.Button--disabled),
@@ -834,7 +861,9 @@
   .PotTypeaheadItem--highlighted.PotTypeaheadItem,
   .ProfileSettingsDialogDisplayContent-backgroundSettingsSelectOption--unselected:hover,
   .ProfileSettingsDialogDisplayContent-backgroundSettingsSelectOption--unselected:focus,
-  .InboxThread:hover .InboxThread-button:hover {
+  .InboxThread:hover .InboxThread-button:hover,
+  .Pill.Pill--plaintext.Pill--clickable:hover,
+  .TaskPaneAssigneeToken-multiAssignButton {
     background: #444;
   }
   .potColor-background--NONE,
@@ -1054,7 +1083,8 @@
     background: #888;
   }
 
-  .TaskProjectToken--disableSpreadsheetTaskPane.TaskProjectToken--isEditable:hover>.TaskProjectToken-taskProjectPill .TaskProjectPill-pill.Pill--colorNone, .TaskProjectToken--disableSpreadsheetTaskPane.TaskProjectToken--isEditable:hover>.TaskProjectToken-taskProjectPill .TaskProjectPill-pill.Pill--plaintext {
+  .TaskProjectToken--disableSpreadsheetTaskPane.TaskProjectToken--isEditable:hover>.TaskProjectToken-taskProjectPill .TaskProjectPill-pill.Pill--colorNone, .TaskProjectToken--disableSpreadsheetTaskPane.TaskProjectToken--isEditable:hover>.TaskProjectToken-taskProjectPill .TaskProjectPill-pill.Pill--plaintext,
+  .TokenButton.TokenButton--interactive:focus {
     transition: all 0.3s ease-in-out;
     background-color: var(--asher);
     color: var(--alabaster);
@@ -1276,7 +1306,9 @@
   .AssigneeWithName-name,
   .CommentOnlyInfo-icon,
   .AttachmentCard-name,
-  .StoryActorName-actorLink {
+  .StoryActorName-actorLink,
+  .AssigneeToken--spreadsheetTaskPane .AssigneeToken-userNameLabel,
+  .Pill.Pill--plaintext.Pill--clickable {
     color: var(--pearl);
     fill: var(--pearl);
   }
@@ -1324,6 +1356,11 @@
   .SidebarFavoritesAndMore-showMoreOrLessButton,
   .MenuItem-selectedIcon {
     fill: var(--alto);
+  }
+
+  .TaskPaneAssigneeToken--spreadsheetTaskPane .TaskPaneAssigneeToken-multiAssignButton {
+    border-left-color: var(--stone);
+    fill: var(--heather);
   }
 
   .FeatureStageIndicator-feedbackLink--withoutType {
@@ -4225,7 +4262,6 @@
   }
   .CustomPropertyEnumOptionRow::after,
   .CustomPropertyEnumOptionRow.CustomPropertyEnumOptionRow--forcePlaceholder::after,
-  .TaskRow:not(.TaskRow--borderless)::after,
   .FakeSearchGridRow:not(:last-of-type)::after,
   .SearchConversationRow:not(.SearchConversationRow--borderless)::after {
     border-bottom: 1px solid var(--asher);
